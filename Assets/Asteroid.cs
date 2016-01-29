@@ -4,9 +4,11 @@ using System.Collections;
 public class Asteroid : MonoBehaviour {
 
 	Rigidbody body;
+	public float startingVelocity = 20f;
 
 	void Awake() {
 		body = GetComponent<Rigidbody>();
+		body.velocity = body.transform.forward * startingVelocity;
 	}
 	
 	// Update is called once per frame
